@@ -1,20 +1,40 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { useState, useCallback, useEffect } from 'react';
+// import usef
 
-export default function App() {
+
+import AppButton from './Component/AppButton';
+
+import NavigationScreen from './Navigation/navigationScreen';
+
+
+export default function App () {
+  const [appReady, setappReady] = useState( false )
+  
+  
+
+  // useEffect( () => {
+  //   async function prepare () {
+  //     try {
+  //       await 
+  //     }
+      
+  //   }
+  // })
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+		<View style={styles.container}>
+      <NavigationScreen />
+
+      
+		
+
+			<StatusBar style="auto" />
+		</View>
+	);
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+  
 });
