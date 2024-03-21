@@ -1,40 +1,41 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import { useState, useCallback, useEffect } from 'react';
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View } from "react-native";
+import { useState, useCallback, useEffect } from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
 // import usef
 
+import AppButton from "./Component/AppButton";
 
-import AppButton from './Component/AppButton';
+import NavigationScreen from "./Navigation/navigationScreen";
+import HomePage from "./Screens/HomePage";
 
-import NavigationScreen from './Navigation/navigationScreen';
+export default function App() {
+	const [appReady, setappReady] = useState(false);
+	const Drawer = createDrawerNavigator();
 
+	// useEffect( () => {
+	//   async function prepare () {
+	//     try {
+	//       await
+	//     }
 
-export default function App () {
-  const [appReady, setappReady] = useState( false )
-  
-  
+	//   }
+	// })
 
-  // useEffect( () => {
-  //   async function prepare () {
-  //     try {
-  //       await 
-  //     }
-      
-  //   }
-  // })
-
-  return (
-		<View style={styles.container}>
-      <NavigationScreen />
-
-      
-		
+	return (
+		<NavigationContainer>
+			{/* <NavigationScreen /> */}
+			{/* <Drawer.Navigator>
+				<Drawer.Screen name={Home} component={HomePage} />
+				<Drawer.Screen name={Contact} component={Contact} />
+			</Drawer.Navigator> */}
+			<View><Text>dfasf</Text></View>
 
 			<StatusBar style="auto" />
-		</View>
+		</NavigationContainer>
 	);
 }
 
-const styles = StyleSheet.create({
-  
-});
+const styles = StyleSheet.create({});

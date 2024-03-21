@@ -13,6 +13,7 @@
     "@expo/metro-config": "^0.10.0",
     "@fontsource/open-sans": "^5.0.27",
     "@react-navigation/bottom-tabs": "^6.5.20",
+    "@react-navigation/drawer": "^6.6.15",
     "@react-navigation/native-stack": "^6.9.26",
     "expo": "~50.0.13",
     "expo-font": "^11.10.3",
