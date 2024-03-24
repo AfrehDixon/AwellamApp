@@ -11,7 +11,7 @@ const logo = require("../assets/logo.png");
 export default function OnbordingScreen({ navigation }) {
 	return (
 		<View>
-			<Image source={logo} />
+			<Image source={require('../assets/logo.png')}  />
 			<View>
 				<View>
 					<AppButton
